@@ -1,0 +1,61 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter three first names:"); 
+        String name1= sc.nextLine();
+        String name2= sc.nextLine();
+        String name3= sc.nextLine();
+        System.out.println("Possible names are:"); 
+        System.out.println("1 - " + name1 + " " + name2);
+        System.out.println("2 - " + name1 + " " + name3);
+        System.out.println("3 - " + name2 + " " + name1); 
+        System.out.println("4 - " + name2 + " " + name3);
+        System.out.println("5 - " + name3 + " " + name1); 
+        System.out.println("6 - " + name3 + " " + name2); 
+        
+        System.out.println("Enter 1-6 to select a name:");
+        int nameSelect = sc.nextInt();
+        
+        char firstName = name1.charAt(0);
+        char secondName = name2.charAt(0);
+        char thirdName = name3.charAt(0);
+        
+        
+        if (nameSelect == 1){
+            System.out.print("The initials for " + name1 + " " + name2 + " is: ");
+            System.out.print(firstName);
+            System.out.println(secondName);
+            System.out.println("Suggested Username: " + name1.toLowerCase() + "_" + name2.toLowerCase());
+        }else if (nameSelect == 2){
+            System.out.print("The initials for " + name1 + " " + name3 + " is: ");
+            System.out.print(firstName);
+            System.out.println(thirdName);
+            System.out.println("Suggested Username: " + name1.toLowerCase() + "_" + name3.toLowerCase());
+        }else if (nameSelect == 3){
+            System.out.print("The initials for " + name2 + " " + name1 + " is: ");
+            System.out.print(secondName);
+            System.out.println(firstName);
+            System.out.println("Suggested Username: " + name2.toLowerCase() + "_" + name1.toLowerCase());
+        }else if (nameSelect == 4){
+            System.out.print("The initials for " + name2 + " " + name3 + " is: ");
+            System.out.print(secondName);
+            System.out.println(thirdName);
+            System.out.println("Suggested Username: " + name2.toLowerCase() + "_" + name3.toLowerCase());
+        }else if (nameSelect == 5){
+            System.out.print("The initials for " + name3 + " " + name1 + " is: ");
+            System.out.print(thirdName);
+            System.out.println(firstName);
+            System.out.println("Suggested Username: " + name3.toLowerCase() + "_" + name1.toLowerCase());
+        }else if (nameSelect == 6){
+            System.out.print("The initials for " + name3 + " " + name2 + " is: ");
+            System.out.print(thirdName);
+            System.out.println(secondName);
+            System.out.println("Suggested Username: " + name3.toLowerCase() + "_" + name2.toLowerCase());
+        }else{
+            System.out.println("Invalid Input");
+        }
+        
+    }
+}
